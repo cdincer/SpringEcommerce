@@ -23,7 +23,32 @@ public class ProductDao {
         product1.setProductPrice(1.10);
         
         productList = new ArrayList<Product>();
-productList.add(product1);
+		productList.add(product1);
+		product1= new Product();
+		product1.setProductCategory("Item2");
+		product1.setProductName("TestItem2");
+		product1.setProductDescription("TestItemDescription2");
+		product1.setUnitInStock(5);
+		product1.setProductManufacturer("TestManufacturer2");
+		product1.setProductColor("Red");
+		product1.setProductStatus("Avaliable");
+		product1.setProductPrice(1.20);
+		
+		productList.add(product1);
+		
+		
+		product1= new Product();
+		product1.setProductCategory("Item3");
+		product1.setProductName("TestItem3");
+		product1.setProductDescription("TestItemDescription3");
+		product1.setUnitInStock(5);
+		product1.setProductManufacturer("TestManufacturer3");
+		product1.setProductColor("Yellow");
+		product1.setProductStatus("Avaliable");
+		product1.setProductPrice(1.30);
+		productList.add(product1);
+
+
         return productList;
 	}
 	
