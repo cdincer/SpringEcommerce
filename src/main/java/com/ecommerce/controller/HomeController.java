@@ -87,7 +87,7 @@ public class HomeController {
 		product.setProductStatus("Avaliable");
 		randomNum = ThreadLocalRandom.current().nextInt(5, 100);
 		product.setUnitInStock(randomNum);
-		product.setProductDescription(product.getProductName()+" Desc");
+		product.setProductDescription(product.getProductName()+" Description");
 		
 		productDao.addProduct(product);
 
