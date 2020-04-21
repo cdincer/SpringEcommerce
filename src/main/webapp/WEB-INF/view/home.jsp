@@ -14,10 +14,10 @@
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Favicons -->
-<link rel="icon" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="<c:url value="/resources/img/favicons/favicon-32x32.png"/>" sizes="32x32" type="image/png">
+<link rel="icon" href="<c:url value="/resources/img/favicons/favicon-16x16.png"/>" sizes="16x16" type="image/png">
+<link rel="manifest" href="<c:url value="/resources/assets/img/favicons/manifest.json"/>">
+<link rel="mask-icon" href="<c:url value="/resources//assets/img/favicons/safari-pinned-tab.svg"/>" color="#563d7c">
 <link rel="icon" href="/assets/img/favicons/favicon.ico">
 
 <link  href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet"/>
@@ -178,7 +178,7 @@
 
 
 </main>
-<script src="js/jquery-3.4.1.slim.min.js"></script>
+<script src="<c:url value="/resources/js/jquery-3.4.1.slim.min.js"/>"></script>
      <!--   <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script></body> -->
       
          <script>window.jQuery || document.write('<script src="<c:url value="/resources/js/jquery-3.4.1.slim.min.js"/>"><\/script>')</script>

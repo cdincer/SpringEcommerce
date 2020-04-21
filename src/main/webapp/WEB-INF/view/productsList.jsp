@@ -1,7 +1,7 @@
 
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/view/template/Header.jsp"%>
-
 
 <main role="main">
 <br>
@@ -20,6 +20,7 @@
 <th>B1 Col</th>
 <th>B2 Col</th>
 <th>C1 Col</th>
+<th></th>
 
 </tr>
 </thead>
@@ -31,7 +32,10 @@
 <td>${product.productCategory}</td>
 <td>${product.productStatus}</td>
 <td>${product.productPrice}</td>
-
+<td><a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
+<button type="button" class="btn btn-default btn-sml">
+<img src="<c:url value="/resources/assets/img/info-circle.svg"/>" />  Details
+</button></td>
 </tr>
 </c:forEach>
 

@@ -1,5 +1,6 @@
 package com.ecommerce.dao;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class ProductDao {
 	public List<Product> getProductList()
 	{
 		Product product1= new Product();
-		
+		product1.setProductId("1");
 		product1.setProductCategory("Item1");
 		product1.setProductName("TestItem1");
 		product1.setProductDescription("TestItemDescription1");
@@ -25,6 +26,7 @@ public class ProductDao {
         productList = new ArrayList<Product>();
 		productList.add(product1);
 		product1= new Product();
+		product1.setProductId("2");
 		product1.setProductCategory("Item2");
 		product1.setProductName("TestItem2");
 		product1.setProductDescription("TestItemDescription2");
@@ -38,6 +40,7 @@ public class ProductDao {
 		
 		
 		product1= new Product();
+		product1.setProductId("3");
 		product1.setProductCategory("Item3");
 		product1.setProductName("TestItem3");
 		product1.setProductDescription("TestItemDescription3");
@@ -50,6 +53,19 @@ public class ProductDao {
 
 
         return productList;
+	}
+
+	public Product getProductById(String productId) throws IOException
+	{
+		for(Product product: getProductList())
+		{
+			if(product.getProductId().equals(productId))
+			{
+				return product;
+			}
+		}
+		
+		throw new IOException("No product found");
 	}
 	
 	

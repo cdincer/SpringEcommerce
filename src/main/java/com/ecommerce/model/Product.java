@@ -1,6 +1,8 @@
 package com.ecommerce.model;
 
 public class Product {
+	
+    private String productId;
 	private String productName;
 	private String productCategory;
 	private String productDescription;
@@ -56,6 +58,12 @@ public class Product {
 	}
 	public void setProductManufacturer(String productManufacturer) {
 		this.productManufacturer = productManufacturer;
+	}
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
 	}
 
 }

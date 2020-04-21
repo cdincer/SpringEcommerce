@@ -21,10 +21,10 @@
 
 				</div>
 				<div class="col-md-5">
-					<h3>Product Name</h3>
-					<p>Product Description</p>
-					<p>Product Manufacturer</p>
-					<p>Product Category</p>
+					<h3>${product.productName}</h3>
+					<p>${product.productCategory}</p>
+					<p>${product.productStatus}</p>
+					<p>${product.productPrice}</p>
 					<p>Product Status</p>
 
 				</div>
@@ -33,8 +33,6 @@
 
 
 	</div>
-
-
 
 
 	<!-- FOOTER -->
