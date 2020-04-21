@@ -3,6 +3,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/view/template/Header.jsp"%>
 
+    <title>Product List - Bootstrap</title>
+
 <main role="main">
 <br>
 <div class="container-wrapper">
