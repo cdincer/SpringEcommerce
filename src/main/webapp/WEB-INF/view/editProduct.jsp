@@ -7,24 +7,25 @@
 	<br>
 	<div class="container-wrapper">
 		<div class="container">
-			<h1>Admin Product Detail</h1>
+			<h1>Admin Product Edit Detail</h1>
 
-			<p class="lead">Admin Single Product Add Page</p>
+			<p class="lead">Admin Single Product Edit Page</p>
 
 			<p class="lead">Fill the below information to add a product:</p>
-			<form:form
-				action="${pageContext.request.contextPath}/admin/addProduct"
-				method="post" commandName="product" enctype="multipart/form-data">
+	
+ 
+        <form:form action="${pageContext.request.contextPath}/admin/editProduct" method="post"
+                   commandName="product" enctype="multipart/form-data">
+        <form:hidden path="productId" value="${product.productId}" />
 				<div class="form-group">
 					<label for="name">Product Name</label>
-					<form:input path="productName" id="name" class="form-Control" />
+					<form:input path="productName" id="name" class="form-Control" value="${product.productName}" />
 					<label for="name">Product Category</label>
-					<form:input path="productCategory" id="category"
-						class="form-Control" />
+					<form:input path="productCategory" id="category" class="form-Control" value="${product.productCategory}" />
 					<label for="name">Product Price</label>
-					<form:input path="productPrice" id="price" class="form-Control" />
+					<form:input path="productPrice" id="price" class="form-Control" value="${product.productPrice}" />
 					<label for="name">Product Color</label>
-					<form:input path="productColor" id="color" class="form-Control" />
+					<form:input path="productColor" id="color" class="form-Control" value="${product.productColor}"/>
 					<div class="form-group"></div>
 					<label class="control-label"for="productImage">Upload Picture</label>				
 					<form:input id="productImage" path="productImage" type="file" class="form:input-large"/>
