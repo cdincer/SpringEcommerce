@@ -36,7 +36,7 @@
 					<td>${product.productCategory}</td>
 					<td>${product.productStatus}</td>
 					<td>${product.productPrice}</td>
-					<td><a
+					<td width="15%"><a
 						href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
 							<button type="button" class="btn btn-secondary btn-sml">
 								<img
