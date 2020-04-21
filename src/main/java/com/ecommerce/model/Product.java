@@ -1,8 +1,17 @@
 package com.ecommerce.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
 	
-    private String productId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+    private int productId;
+    
 	private String productName;
 	private String productCategory;
 	private String productDescription;
@@ -59,10 +68,10 @@ public class Product {
 	public void setProductManufacturer(String productManufacturer) {
 		this.productManufacturer = productManufacturer;
 	}
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 
