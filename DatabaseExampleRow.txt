@@ -1,3 +1,38 @@
+create table users(
+	username varchar(50) not null primary key,
+	password varchar(50) not null,
+	enabled boolean not null
+);
+
+create table authorities (
+	username varchar(50) not null,
+	authority varchar(50) not null,
+	constraint fk_authorities_users foreign key(username) references users(username)
+);
+
+create unique index ix_auth_username on authorities (username,authority);
+
+INSERT INTO `bondsonly`.`users`
+(`username`,
+`password`,
+`enabled`)
+VALUES
+('admin',
+123,
+TRUE);
+
+
+
+INSERT INTO `bondsonly`.`authorities`
+(`username`,
+`authority`)
+VALUES
+('admin' ,
+'ROLE_USER');
+
+
+
+
 insert into ecommerce.product (productId, productCategory, productDescription, productPrice, productColor, unitInStock, productStatus, productManufacturer, productName) values (2, 'Movies', 1986, 10358, 'Teal', 42, 'Avaliable', 'Mitsubishi', 'Pajero');
 insert into ecommerce.product (productId, productCategory, productDescription, productPrice, productColor, unitInStock, productStatus, productManufacturer, productName) values (3, 'Movies', 1995, 11574, 'Aquamarine', 6, 'Avaliable', 'Dodge', 'Ram 1500 Club');
 insert into ecommerce.product (productId, productCategory, productDescription, productPrice, productColor, unitInStock, productStatus, productManufacturer, productName) values (4, 'Industrial', 1988, 18343, 'Violet', 40, 'Avaliable', 'Pontiac', 'Grand Am');
