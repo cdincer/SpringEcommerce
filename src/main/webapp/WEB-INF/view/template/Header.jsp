@@ -11,7 +11,7 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
     <!-- Favicons -->
 <link rel="icon" href="<c:url value="/resources/img/favicons/favicon-32x32.png"/>" sizes="32x32" type="image/png">
 <link rel="icon" href="<c:url value="/resources/img/favicons/favicon-16x16.png"/>" sizes="16x16" type="image/png">

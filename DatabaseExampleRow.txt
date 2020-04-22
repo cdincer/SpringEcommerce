@@ -12,7 +12,7 @@ create table authorities (
 
 create unique index ix_auth_username on authorities (username,authority);
 
-INSERT INTO `bondsonly`.`users`
+INSERT INTO `ecommerce`.`users`
 (`username`,
 `password`,
 `enabled`)
@@ -23,12 +23,13 @@ TRUE);
 
 
 
-INSERT INTO `bondsonly`.`authorities`
+INSERT INTO `ecommerce`.`authorities`
 (`username`,
 `authority`)
 VALUES
 ('admin' ,
 'ROLE_USER');
+
 
 
 
