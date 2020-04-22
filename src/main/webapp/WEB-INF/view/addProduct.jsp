@@ -17,18 +17,21 @@
 				method="post" commandName="product" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="name">Product Name</label>
+					<form:errors path="productName" cssStyle="color:#fff0000" />
 					<form:input path="productName" id="name" class="form-Control" />
 					<label for="name">Product Category</label>
-					<form:input path="productCategory" id="category"
-						class="form-Control" />
+					<form:input path="productCategory" id="category" class="form-Control" />
 					<label for="name">Product Price</label>
+				    <form:errors path="productPrice" cssStyle="color:#fff0000"/>					
 					<form:input path="productPrice" id="price" class="form-Control" />
 					<label for="name">Product Color</label>
 					<form:input path="productColor" id="color" class="form-Control" />
 					<div class="form-group"></div>
-					<label class="control-label"for="productImage">Upload Picture</label>				
-					<form:input id="productImage" path="productImage" type="file" class="form:input-large"/>
-					</div>
+					<label class="control-label" for="productImage">Upload
+						Picture</label>
+					<form:input id="productImage" path="productImage" type="file"
+						class="form:input-large" />
+				</div>
 				<input type="submit" value="Submit" class="btn btn-primary">
 				<a href="<c:url value="/admin/productInventory"/>"
 					class="btn btn-danger">Cancel</a>

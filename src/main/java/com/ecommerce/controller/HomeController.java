@@ -11,6 +11,7 @@ import org.apache.catalina.connector.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import com.ecommerce.dao.ProductDao;
 import com.ecommerce.model.Product;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 @Controller
 public class HomeController {
@@ -84,8 +86,15 @@ public class HomeController {
 	
 	
 	@RequestMapping(value ="/admin/addProduct",method = RequestMethod.POST)
-	public String addProductPost(@ModelAttribute("product") Product product,HttpServletRequest request)
+	public String addProductPost(@Valid @ModelAttribute("product") Product product,HttpServletRequest request,BindingResult result)
 	{
+		
+		if(result.hasErrors())
+		{
+			return "addProduct";
+		}
+		
+		
 		int randomNum = ThreadLocalRandom.current().nextInt(1, 1000);
 		//TO:DO Add A randomizer function for product.
 		Product CopierProduct = productDao.getProductById(randomNum);		
@@ -138,9 +147,13 @@ public class HomeController {
 	}
 	
     @RequestMapping(value = "/admin/editProduct", method = RequestMethod.POST)
-	public String editProduct(@ModelAttribute("product") Product product,HttpServletRequest request)
+	public String editProduct(@Valid @ModelAttribute("product") Product product,HttpServletRequest request,BindingResult result)
 	{
-		
+    	if(result.hasErrors())
+		{
+			return "editProduct";
+		}
+    	
 		productDao.editProduct(product);
 		
 		return "redirect:/admin/productInventory";
