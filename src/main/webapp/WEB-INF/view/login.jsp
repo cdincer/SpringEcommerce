@@ -5,7 +5,7 @@
 <div class="container-wrapper">
     <div class="container">
         <div id="login-box">
-
+<br>
             <h2>Login with Username and Password</h2>
 
             <c:if test="${not empty msg}">
@@ -25,7 +25,7 @@
                     <input type="password" id="password" name="password" class="form-control" />
                 </div>
 
-                <input type="submit" value="Submit" class="btn btn-default">
+                <input type="submit" value="Submit" class="btn btn-primary">
 
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
             </form>

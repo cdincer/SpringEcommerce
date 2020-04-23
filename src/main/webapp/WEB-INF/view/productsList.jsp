@@ -13,7 +13,6 @@
 
 <p class="lead"> Description for all products </p>
 
-</div>
 <table class="table table-striped table-hover">
 <thead>
 <tr class="bg-success">
@@ -42,6 +41,8 @@
 </c:forEach>
 
 </table>
+</div>
+
 
 
 </div>
