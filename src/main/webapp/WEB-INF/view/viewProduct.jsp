@@ -62,7 +62,7 @@
             </div>
         </div>
 
-
+        <script src="<c:url value="/resources/js/controller.js" /> "></script>
 
 	<!-- FOOTER -->
 	<%@include file="/WEB-INF/view/template/Footer.jsp"%>
