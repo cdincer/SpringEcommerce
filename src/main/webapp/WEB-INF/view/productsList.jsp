@@ -35,7 +35,7 @@
 <td>${product.productStatus}</td>
 <td>${product.productPrice}</td>
 <td><a href="<spring:url value="/productList/viewProduct/${product.productId}"/>">
-<button type="button" class="btn btn-default btn-sml">
+<button type="button" class="btn btn-success btn-sml">
 <img src="<c:url value="/resources/assets/img/info-circle.svg"/>" />  Details
 </button></td>
 </tr>

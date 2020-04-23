@@ -34,8 +34,8 @@
                     <td>{{item.product.productPrice}}</td>
                     <td>{{item.quantity}}</td>
                     <td>{{item.totalPrice}}</td>
-                    <td><a href="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)">
-                        <span class="glyphicon glyphicon-remove"></span>remove</a></td>
+                    <td><a href="#" class="btn btn-danger" ng-click="removeFromCart(item.product.productId)">
+                       Remove</a></td>
                 </tr>
                 <tr>
                     <th></th>
@@ -46,7 +46,7 @@
                 </tr>
             </table>
 
-            <a href="<spring:url value="/productList" />" class="btn btn-default">Continue Shopping</a>
+            <a href="<spring:url value="/productList" />" class="btn btn-primary">Continue Shopping</a>
             </div>
         </section>
 

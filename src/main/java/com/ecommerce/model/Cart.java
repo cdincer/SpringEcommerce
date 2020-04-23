@@ -75,9 +75,11 @@ public class Cart {
 	
 	public void updateGrandTotal()
 	{
+		grandTotal=0;
+
 		for(CartItem item : cartItems.values())
 		{
-			grandTotal = grandTotal + item.getTotalPrice();
+			grandTotal = grandTotal + (item.getTotalPrice() * item.getQuantity());
 		}
 	}
 	
